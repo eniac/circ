@@ -3,8 +3,12 @@
 #[cfg(feature = "c")]
 pub mod c;
 pub mod datalog;
+
 #[cfg(all(feature = "smt", feature = "zok"))]
 pub mod zsharp;
+
+#[cfg(feature = "regex")]
+pub mod regex;
 
 use crate::ir::proof;
 use crate::ir::term::{Computations, PartyId};
